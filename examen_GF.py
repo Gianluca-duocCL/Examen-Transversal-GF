@@ -9,8 +9,7 @@ Productos = {"8475HD": ["HP",15.6,"8GB","DD","1T", "intel Core i5", "Nvidia GTX1
              "UWU131HD":["Dell",15.6,"8GB","DD","1T", "AMD Ryzen 3", "Nvidia GTX1050"],
                    
 }
-#marcas
-Marcas={"Dell{UWU131HD}"}             
+            
 #Stock={modelo:[precio,stock],..}
 
 Stock={      "8475HD": [387990,10],
@@ -38,11 +37,11 @@ def Stock_marca(Marca):
     totalcomputadores=0
     Marca =input ("Ingrese Marca que desea buscar: ").strip()
     for parte, parte2 in Productos.items():
-         if Marca==parte2 [0].lower():
+         if Marca==parte2 [0]:
              contador+=1
              totalcomputadores+= +1
          if contador != 0:
-             print(f"Lo que hay ahora {Stock} de la marca ingresada")
+             print(f"El stock es {totalcomputadores}")
          else: 
              print("No hay productos con ese nombre de marca")
     
@@ -55,7 +54,7 @@ def Busqueda_Precio(p_min, p_max):
           p_max= float (input("ingrese el precio maximo por favor"))
           for parte, parte2 in  Stock.items():
             if parte2[0]>=p_min and parte2[0] <=p_max:
-                print (f" Se ha encontrado un producto, hay {parte2[1]} a {parte2[0]} pesos")
+                print (f" Se han encontrado productos, hay {parte2[1]} a {parte2[0]} pesos")
                 break
 
 
@@ -72,7 +71,6 @@ def Actualizar_precio(modelo, p):
      #examen funciones
 import examen_GF as fc
 opcion = ''
-usuarios = {}
 Marca = {}
 precio={}
 valor={}
